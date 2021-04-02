@@ -5,7 +5,7 @@ require('dotenv').config()
 const MongoClient = require('mongodb').MongoClient;
 const ObjectID=require('mongodb').ObjectID;
 
-const port = process.env.PORT || 5000;
+const port = 5000;
 const app = express()
 app.use(cors());
 app.use(bodyParser.json());
@@ -70,4 +70,4 @@ app.get('/bookings',(req,res)=>{
 });
 
 
-app.listen(port)
+app.listen(process.env.PORT || port)
