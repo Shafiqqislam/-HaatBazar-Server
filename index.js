@@ -6,6 +6,10 @@ const MongoClient = require('mongodb').MongoClient;
 const ObjectID=require('mongodb').ObjectID;
 
 const port = 5000;
+app.get('/',(req,res)=>{
+  res.send('working')
+})
+
 const app = express()
 app.use(cors());
 app.use(bodyParser.json());
