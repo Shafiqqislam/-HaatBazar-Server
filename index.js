@@ -1,6 +1,5 @@
 const express = require('express')
 const cors = require('cors');
-const bodyParser = require('body-parser');
 require('dotenv').config()
 const MongoClient = require('mongodb').MongoClient;
 const ObjectID=require('mongodb').ObjectID;
@@ -12,7 +11,7 @@ app.get('/',(req,res)=>{
 
 const app = express()
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 console.log(process.env.DB_USER)
 console.log(process.env.DB_PASS)
 console.log(process.env.DB_NAME)
